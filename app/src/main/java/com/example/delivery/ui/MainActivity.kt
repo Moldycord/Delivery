@@ -53,13 +53,14 @@ class MainActivity : ComponentActivity() {
 
     private fun onDriverSelected(driver: Driver) {
         val shipment = viewModel.onDriverSelected(driver)
-        buildDialog(shipment)
+        buildDialog(shipment, driver.firstName)
     }
 
-    private fun buildDialog(shipment: Shipment?) {
+    private fun buildDialog(shipment: Shipment?, driverName: String) {
         shipment?.let {
             val alertDialogBuilder = AlertDialog.Builder(this@MainActivity)
-            alertDialogBuilder.setTitle("Assigned shipment")
+            alertDialogBuilder.setTitle("Assigned shipment $driverName")
+                .setMessage(shipment.toString())
             val dialog = alertDialogBuilder.create()
             dialog.show()
         }

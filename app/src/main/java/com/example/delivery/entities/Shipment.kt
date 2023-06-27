@@ -15,4 +15,8 @@ data class Shipment(
     val state: String,
     @SerializedName("zipCode")
     val zipCode: Int
-)
+) {
+    override fun toString(): String {
+        return "$streetNumber $streetName ${unitNumber ?: ""} $city $state $zipCode"
+    }
+}

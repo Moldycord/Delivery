@@ -27,7 +27,7 @@ class DriversAdapter(
     override fun onBindViewHolder(holder: DriverViewHolder, position: Int) {
         with(holder) {
             with(driversList[position]) {
-                binding.textViewDriverName.text = this.firstName + "" + this.lastName
+                binding.textViewDriverName.text = "${this.firstName} ${this.lastName}"
                 holder.itemView.setOnClickListener { listener.onClick(this) }
             }
 
