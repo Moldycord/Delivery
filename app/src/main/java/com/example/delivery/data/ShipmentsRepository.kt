@@ -7,7 +7,6 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 class ShipmentsRepository {
-
     fun getShipments(): List<Shipment> {
         val jsonString = getJsonDataFromAsset(SHIPMENTS_JSON)
         val listShipmentsType = object : TypeToken<List<Shipment>>() {}.type

@@ -10,6 +10,7 @@ import com.example.delivery.ui.listeners.OnDriverClickListener
 class DriversAdapter(
     private val driversList: List<Driver>, private val listener: OnDriverClickListener
 ) : RecyclerView.Adapter<DriversAdapter.DriverViewHolder>() {
+    private var drivers = driversList
 
 
     inner class DriverViewHolder(val binding: DriverItemViewBinding) :
