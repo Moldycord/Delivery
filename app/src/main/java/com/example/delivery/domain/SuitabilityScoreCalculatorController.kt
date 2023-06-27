@@ -1,10 +1,7 @@
 package com.example.delivery.domain
 
-import com.example.delivery.utils.A_VOWEL
-import com.example.delivery.utils.E_VOWEL
-import com.example.delivery.utils.I_VOWEL
-import com.example.delivery.utils.O_VOWEL
-import com.example.delivery.utils.U_VOWEL
+
+import com.example.delivery.utils.VOWELS_STR
 
 class SuitabilityScoreCalculatorController {
 
@@ -20,9 +17,9 @@ class SuitabilityScoreCalculatorController {
             countVowelsOrConsonants(driverName, false) * 1
         }
 
-        val commonFactor = findCommonFactor(streetName.length,driverName.length)
+        val commonFactor = findCommonFactor(streetName.length, driverName.length)
 
-        if(commonFactor>1){
+        if (commonFactor) {
             currentScore *= 1.5
         }
         return currentScore
@@ -30,25 +27,18 @@ class SuitabilityScoreCalculatorController {
     }
 
     private fun countVowelsOrConsonants(driver: String, shouldReturnVowels: Boolean): Double {
-        var vowels = 0
-        var consonants = 0
-
-        for (i in driver.indices) {
-            when (driver[i].uppercaseChar()) {
-                A_VOWEL, E_VOWEL, I_VOWEL, O_VOWEL, U_VOWEL -> ++vowels
-                else -> ++consonants
-            }
-        }
+        val vowels = driver.count { it in VOWELS_STR }
+        val consonants = driver.count { it !in VOWELS_STR }
 
         return if (shouldReturnVowels) vowels.toDouble() else consonants.toDouble()
     }
 
-    private fun findCommonFactor(streetNameSize: Int, driverNameSize: Int): Int {
-
-        return if(driverNameSize!=0)
-            findCommonFactor(driverNameSize,streetNameSize% driverNameSize)
-        else
-            streetNameSize
-
+    private fun findCommonFactor(streetNameSize: Int, driverNameSize: Int): Boolean {
+        for (i in 2..minOf(
+            streetNameSize, driverNameSize
+        )) if (streetNameSize % i == 0 && driverNameSize % i == 0) {
+            return true
+        }
+        return false
     }
 }
