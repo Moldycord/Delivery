@@ -13,7 +13,7 @@ class AssignmentDeliveryController {
         val assignments = mutableMapOf<Driver, Shipment>()
 
         for (shipment in shipments) {
-            var maxScore = Double.MIN_VALUE
+            var currentMaxScore = Double.MIN_VALUE
             var currentBestDriver: Driver? = null
 
             for (driver in drivers) {
@@ -24,8 +24,8 @@ class AssignmentDeliveryController {
                     )
                     println(score.toString())
 
-                    if (score > maxScore) {
-                        maxScore = score
+                    if (score > currentMaxScore) {
+                        currentMaxScore = score
                         currentBestDriver = driver
                     }
                 }
