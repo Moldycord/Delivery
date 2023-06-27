@@ -1,0 +1,75 @@
+[
+  {
+    "streetNumber": 215,
+    "streetName": "Osinki Manors",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 9856,
+    "streetName": "Marvin Stravenue",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 7127,
+    "streetName": "Kathlyn Ferry",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 987,
+    "streetName": "Champlin Lake",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 63187,
+    "streetName": "Volkman Garden",
+    "unitNumber": "Suite 447",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 75855,
+    "streetName": "Dessie Lights",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 1797,
+    "streetName": "Adolf Island",
+    "unitNumber": "Apt. 744",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 2431,
+    "streetName": "Lindgren Corners",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 8725,
+    "streetName": "Aufderhar River",
+    "unitNumber": "Suite 859",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  },
+  {
+    "streetNumber": 1234,
+    "streetName": "Fake St",
+    "city": "San Diego",
+    "state": "CA",
+    "zipCode": 92126
+  }
+]

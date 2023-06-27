@@ -1,3 +1,10 @@
 package com.example.delivery.entities
 
-data class Driver(val firstName : String)
+import com.google.gson.annotations.SerializedName
+
+data class Driver(
+    @SerializedName("firstName")
+    val firstName: String,
+    @SerializedName("lastName")
+    val lastName: String
+)
